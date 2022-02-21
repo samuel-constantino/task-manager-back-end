@@ -2,9 +2,10 @@
   "name": "task-manager-back-end",
   "version": "1.0.0",
   "description": "API REST for task management using MongoDB, NodeJS, Express",
-  "main": "src/server.js",
+  "main": "src/api/server.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "npm run test",
+    "dev": "nodemon src/api/server.js"
   },
   "repository": {
     "type": "git",
