@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/samuel-constantino/task-manager-back-end/issues"
   },
-  "homepage": "https://github.com/samuel-constantino/task-manager-back-end#readme"
+  "homepage": "https://github.com/samuel-constantino/task-manager-back-end#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-trybe-backend": "^1.0.4"
+  }
 }
