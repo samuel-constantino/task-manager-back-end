@@ -1,0 +1,25 @@
+{
+  "name": "task-manager-back-end",
+  "version": "1.0.0",
+  "description": "API REST for task management using MongoDB, NodeJS, Express",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuel-constantino/task-manager-back-end.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "NodeJS",
+    "Express",
+    "Swagger"
+  ],
+  "author": "Samuel Constantino <samuelicapuidados@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samuel-constantino/task-manager-back-end/issues"
+  },
+  "homepage": "https://github.com/samuel-constantino/task-manager-back-end#readme"
+}
