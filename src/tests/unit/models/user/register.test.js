@@ -7,14 +7,20 @@ const { MongoClient } = require('mongodb');
 const { connectionMemory } = require('../util/connectionMemory');
 require('dotenv').config();
 
-const User = require('../../../../models/user');
+const userModel = require('../../../../models/user');
 
 const { DB_NAME } = process.env;
 
-const { USER_PAYLOAD_1, USER_PROPERTIES } = require('../util/modelsMock');
-
 describe('user registration', () => {
     let connectionMock = null;
+    
+    const USER_PAYLOAD = {
+        name: 'User Test',
+        email: 'test@test.com',
+        password: 'test123',
+    };
+    
+    const USER_PROPERTIES = ['_id', 'name', 'email', 'password'];
 
     before(async () => {
         connectionMock = await connectionMemory();
@@ -30,7 +36,7 @@ describe('user registration', () => {
         let response = null;
 
         before(async () => {
-            response = await User.register(USER_PAYLOAD_1);
+            response = await userModel.register(USER_PAYLOAD);
         });
 
         it('returns an object', async () => {
@@ -47,7 +53,7 @@ describe('user registration', () => {
             const createdUser = await connectionMock
                 .db(DB_NAME)
                 .collection('users')
-                .findOne({ name: USER_PAYLOAD_1.name });
+                .findOne({ name: USER_PAYLOAD.name });
 
             expect(createdUser).to.be.not.null;
         });
