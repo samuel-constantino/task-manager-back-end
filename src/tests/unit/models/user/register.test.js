@@ -11,7 +11,7 @@ const userModel = require('../../../../models/user');
 
 const { DB_NAME } = process.env;
 
-describe('user registration', () => {
+describe('user register model', () => {
     let connectionMock = null;
     
     const USER_PAYLOAD = {
