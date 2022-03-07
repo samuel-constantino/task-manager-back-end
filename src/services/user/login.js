@@ -1,15 +1,19 @@
+const md5 = require('md5');
 const userModel = require('../../models/user');
 const { loginValidation } = require('./validations');
 const { ApiError: { badRequest } } = require('../../global/api-error');
 const { getToken } = require('../../global/utils/token');
 
 const login = async (user) => {
+    const { email, password } = user;
     loginValidation(user);
 
-    const userFound = await userModel.findByEmail(user.email);
+    const userFound = await userModel.findByEmail(email);
     if (!userFound) badRequest('User does not exist');
     
-    const result = await userModel.login(user);
+    const encryptPassword = md5(password);
+
+    const result = await userModel.login({ email, password: encryptPassword });
     if (!result) badRequest('Invalid password');
 
     const token = getToken(result);
