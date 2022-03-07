@@ -6,10 +6,10 @@ const { ApiError: { conflict } } = require('../../global/api-error');
 const register = async (newUser) => {
     const { name, email, password } = newUser;
     
+    registerValidation(newUser);
+    
     const checkUser = await userModel.findByEmail(email);
     if (checkUser) conflict('User already exists');
-
-    registerValidation(newUser);
 
     const encryptPassword = md5(password);
     const encryptUser = { name, email, password: encryptPassword };
