@@ -1,12 +1,14 @@
 const express = require('express');
 const { taskRouter } = require('./taskRouter');
-const { userRouter } = require('./userRouter');
+const { loginRouter } = require('./loginRouter');
+const { registerRouter } = require('./registerRouter');
 const { error } = require('../middlewares');
 
 const router = express.Router({ mergeParams: true });
 
 router.use('/task', taskRouter);
-router.use('/user', userRouter);
+router.use('/login', loginRouter);
+router.use('/register', registerRouter);
 
 router.use(error);
 
