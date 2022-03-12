@@ -2,8 +2,8 @@ const express = require('express');
 const rescue = require('express-rescue');
 const userController = require('../controllers/user');
 
-const register = express.Router();
+const registerRouter = express.Router();
 
-register.post('/register', rescue(userController.register));
+registerRouter.post('/', rescue(userController.register));
 
-module.exports = { register };
+module.exports = { registerRouter };
