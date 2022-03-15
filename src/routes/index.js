@@ -6,7 +6,7 @@ const { error } = require('../middlewares');
 
 const router = express.Router({ mergeParams: true });
 
-router.use('/task', taskRouter);
+router.use('/', taskRouter);
 router.use('/login', loginRouter);
 router.use('/register', registerRouter);
 
