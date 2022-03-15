@@ -1,7 +1,7 @@
-const Task = require('../../models/task');
+const taskModel = require('../../models/task');
 
 const findByUser = async (userId) => {
-    const tasks = await Task.findByUser(userId);
+    const tasks = await taskModel.findByUser(userId);
     return tasks;
 };
 
