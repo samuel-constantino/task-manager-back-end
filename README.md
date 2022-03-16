@@ -36,7 +36,7 @@
 npm install
 ```
 
-## Inicialização
+## Uso
 
 ```
 npm start
