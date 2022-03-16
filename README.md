@@ -32,18 +32,14 @@
 
 ## Instalação
 
-```sh
-
+```
 npm install
-
 ```
 
 ## Inicialização
 
 ```
-
 npm start
-
 ```
   
 
@@ -52,9 +48,7 @@ npm start
   
 
 ```sh
-
 npm run test
-
 ```
 
 ## Documentação
@@ -62,9 +56,7 @@ npm run test
 Esta API utiliza a documentação interativa do Swagger para testes manuais. Acesse a rota a seguir para interagir com a API:
 
 ```
-
 http://localhost:4000/docs/
-
 ```
 
 ## Autor
