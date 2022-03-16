@@ -30,6 +30,12 @@
 > API REST para gerenciamento e otimização de tarefas desenvolvida com NodeJS, Express e MongoDB.
   
 
+## Versão Node
+
+```
+v16.14.0
+```
+
 ## Instalação
 
 ```
