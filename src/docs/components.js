@@ -21,11 +21,12 @@ module.exports = {
           },
           status: {
             type: 'string',
-            description: 'The status of the task',
+            description: 'The status of the Task',
             example: 'in progress',
           },
           priority: {
             type: 'object',
+            description: 'The priority level of th Task',
             example: {
               urgent: false,
               important: true,
@@ -64,12 +65,7 @@ module.exports = {
           message: {
             type: 'string',
             description: 'Error message',
-            example: 'Not found',
-          },
-          code: {
-            type: 'string',
-            description: 'Status Code of the Error',
-            example: 'Invalid parameters',
+            example: 'Task not found',
           },
         },
       },

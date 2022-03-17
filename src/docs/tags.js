@@ -1,5 +1,5 @@
 module.exports = {
     tags: [
-      { name: 'Task' },
+      { name: 'Tasks' },
     ],
   };

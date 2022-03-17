@@ -1,6 +1,6 @@
 module.exports = {
   get: {
-    tags: ['Task'],
+    tags: ['Tasks'],
     description: 'Get Task for Id',
     operationId: 'findById',
     parameters: [
@@ -23,8 +23,8 @@ module.exports = {
           },
         },
       },
-      404: {
-        description: 'Task is not found',
+      400: {
+        description: 'Task not found',
         content: {
           'application/json': {
             schema: {

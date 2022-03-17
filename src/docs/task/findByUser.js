@@ -1,6 +1,6 @@
 module.exports = {
   get: {
-    tags: ['Task'],
+    tags: ['Tasks'],
     description: 'Get Tasks for User',
     operationId: 'findByUser',
     parameters: [],
