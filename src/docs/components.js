@@ -59,6 +59,21 @@ module.exports = {
           },
         },
       },
+      Login: {
+        type: 'object',
+        properties: {
+          email: {
+            type: 'string',
+            description: 'email of the user',
+            example: 'samuel@email.com',
+          },
+          password: {
+            type: 'string',
+            description: 'password of the user',
+            example: 'pass123456',
+          },
+        },
+      },
       Error: {
         type: 'object',
         properties: {
