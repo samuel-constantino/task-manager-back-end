@@ -24,6 +24,13 @@ module.exports = {
             description: 'The status of the task',
             example: 'in progress',
           },
+          priority: {
+            type: 'object',
+            example: {
+              urgent: false,
+              important: true,
+            },
+          },
         },
       },
       User: {
