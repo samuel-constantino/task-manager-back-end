@@ -1,5 +1,5 @@
 
-<h1  align="center">Bem-vindo ao Gerenciador de Tarefas [Back-End] 👋</h1>
+<h1  align="center">Bem-vinda ao Gerenciador de Tarefas [Back-End] 👋</h1>
 
 <p>
 
@@ -30,13 +30,19 @@
 > API REST para gerenciamento e otimização de tarefas desenvolvida com NodeJS, Express e MongoDB.
   
 
+## Versão Node
+
+```
+v16.14.0
+```
+
 ## Instalação
 
 ```
 npm install
 ```
 
-## Inicialização
+## Uso
 
 ```
 npm start
