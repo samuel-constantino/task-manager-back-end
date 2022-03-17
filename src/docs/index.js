@@ -4,6 +4,7 @@ const components = require('./components');
 const tags = require('./tags');
 const task = require('./task');
 const login = require('./login');
+const register = require('./register');
 
 module.exports = {
     ...basicInfo,
@@ -12,4 +13,5 @@ module.exports = {
     ...tags,
     ...task,
     ...login,
+    ...register,
 };
