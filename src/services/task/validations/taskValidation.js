@@ -6,9 +6,13 @@ const taskSchema = Joi.object({
   name: Joi.string().min(6).empty(false).required(),
   description: Joi.string().min(10).empty(false).required(),
   status: Joi.string()
-      .valid('In progress', 'Completed')
-      .empty(false)
-      .required(),
+    .valid('In progress', 'Completed')
+    .empty(false)
+    .required(),
+  priority: Joi.object({
+    urgent: Joi.boolean().required(),
+    important: Joi.boolean().required(),
+  }).required(),
 });
 
 const taskValidation = (task) => {
