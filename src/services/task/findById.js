@@ -1,7 +1,7 @@
-const Task = require('../../models/task');
+const taskModel = require('../../models/task');
 
 const findById = async (id) => {
-    const task = await Task.findById(id);
+    const task = await taskModel.findById(id);
     return task;
 };
 
