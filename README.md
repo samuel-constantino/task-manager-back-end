@@ -1,5 +1,5 @@
 
-<h1  align="center">Bem-vinda ao Gerenciador de Tarefas [Back-End] 👋</h1>
+<h1 align="center">Bem-vinda ao Gerenciador de Tarefas [Back-End] 👋</h1>
 
 <p>
   <img  alt="Version"  src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000"  />
@@ -131,7 +131,9 @@ http://localhost:4000/register
 http://localhost:4000/tasks
 ```
 
-![]()
+![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/get-tasks/params.png)
+
+![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/get-tasks/responses/ok.png)
 
 - Tarefa por ID
 
