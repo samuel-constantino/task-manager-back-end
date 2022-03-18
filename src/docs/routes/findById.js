@@ -11,6 +11,15 @@ module.exports = {
         description: 'Task Id',
         example: '620e45f0b404aad8c73f2412',
       },
+      {
+        in: 'header',
+        name: 'authorization',
+        schema: {
+          type: 'string',
+          format: 'token',
+        },
+        required: true,
+      },
     ],
     responses: {
       200: {
