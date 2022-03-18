@@ -101,19 +101,27 @@ v16.14.0
 http://localhost:4000/login
 ```
 
-![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/login/params.png)
+![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-login/params.png)
 
-![Corpo](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/login/body.png)
+![Corpo](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-login/body.png)
 
-![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/login/responses/ok.png)
+![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-login/responses/ok.png)
 
-![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/login/responses/bad-request.png)
+![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-login/responses/bad-request.png)
 
 - Registro
 
 ```
 http://localhost:4000/register
 ```
+
+![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-register/params.png)
+
+![Corpo](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-register/body.png)
+
+![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-register/responses/ok.png)
+
+![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-register/responses/bad-request.png)
 
 #### Tarefa
 
