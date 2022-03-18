@@ -28,11 +28,14 @@
 			- [Login](#login)
 			- [Registro](#registro)
 		- [Tarefa](#tarefa)
-			- [Tarefas por Usuário](#tarefas-por-usuario)
-			- [Tarefas por ID](#tarefas-por-id)
-			- [Criar Tarefas](#criar-tarefas)
-			- [Editar Tarefas](#editar-tarefas)
-			- [Remvoer Tarefas](#remover-tarefas)
+			- [Tarefas por Usuário](#tarefas-por-usuário)
+			- [Tarefas por ID](#tarefa-por-id)
+			- [Criar Tarefas](#criar-tarefa)
+			- [Editar Tarefas](#editar-tarefa)
+			- [Remover Tarefas](#remover-tarefa)
+- [Autor](#autor)
+- [Suporte](#suporte)
+- [Licença](#-licença)
 
 ## Instruções
 
@@ -226,4 +229,4 @@ Este projeto é licenciado pela [ISC](https://github.com/samuel-constantino/task
 
 ***
 
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+Foi usado o seguinte Template para esse Readme: [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
