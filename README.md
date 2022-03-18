@@ -11,10 +11,6 @@
   <a  href="https://github.com/samuel-constantino/task-manager-back-end/graphs/commit-activity"  target="_blank">
     <img  alt="Maintenance"  src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"  />
   </a>
-	
-  <a  href="https://github.com/samuel-constantino/task-manager-back-end/blob/master/LICENSE"  target="_blank">
-    <img  alt="License: ISC"  src="https://img.shields.io/github/license/samuel-constantino/task-manager-back-end"  />
-  </a>
 </p>
 
 
