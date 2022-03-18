@@ -25,7 +25,14 @@
 	- [Respostas](#respostas)
 	- [Pontos de Acesso](#pontos-de-acesso)
 		- [Usuário](#usuário)
+			- [Login](#login)
+			- [Registro](registro)
 		- [Tarefa](#tarefa)
+			- [Tarefas por Usuário](tarefas-por-usuario)
+			- [Tarefas por ID](tarefas-por-id)
+			- [Criar Tarefas](criar-tarefas)
+			- [Editar Tarefas](editar-tarefas)
+			- [Remvoer Tarefas](remover-tarefas)
 
 ## Instruções
 
@@ -91,7 +98,7 @@ v16.14.0
 
 #### Usuário
 
-- Login
+##### Login
 
 ```
 POST /login
@@ -105,7 +112,7 @@ POST /login
 
 ![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-login/responses/bad-request.png)
 
-- Registro
+##### Registro
 
 ```
 POST register
@@ -121,7 +128,7 @@ POST register
 
 #### Tarefa
 
-- Tarefas por Usuário
+##### Tarefas por Usuário
 
 ```
 GET /tasks
@@ -131,7 +138,7 @@ GET /tasks
 
 ![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/get-tasks/responses/ok.png)
 
-- Tarefa por ID
+##### Tarefa por ID
 
 ```
 GET /tasks/:id
@@ -143,7 +150,7 @@ GET /tasks/:id
 
 ![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/get-tasks-id/responses/bad-request.png)
 
-- Criar Tarefa
+##### Criar Tarefa
 
 ```
 POST /tasks
@@ -157,7 +164,7 @@ POST /tasks
 
 ![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-create-task/responses/bad-request.png)
 
-- Editar Tarefa
+##### Editar Tarefa
 
 ```
 POST /tasks
@@ -171,7 +178,7 @@ POST /tasks
 
 ![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/update-task/responses/bad-request.png)
 
-- Remover Tarefa
+##### Remover Tarefa
 
 ```
 DELETE /task/:id
