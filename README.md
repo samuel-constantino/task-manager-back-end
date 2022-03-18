@@ -88,9 +88,12 @@ v16.14.0
 
 O BD utilizado nessa aplicação é o MongoDB. Há duas coleções no banco:
   - Users: 
-```
 
-```
+![User Schema]()
+
+  - Tasks
+
+![Task Schema]()
 
 ## Autor
 
