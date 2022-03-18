@@ -29,40 +29,67 @@
 
 > API REST para gerenciamento e otimização de tarefas desenvolvida com NodeJS, Express e MongoDB.
   
+## Sumário
 
-## Versão Node
+- [Instruções](#instruções)
+
+- [Documentação](#documentação)
+	- [Métodos](#métodos) 
+	- [respostas](#respostas)
+	- [EndPoints](#usuários)
+		- [Usuários](#usuários)
+		- [Login](#login)
+		- [Parceiros](#parceiros)
+		- [Posts](#posts)
+
+## Instruções
+
+### Instalação
+
+Clone o repositório
+  
+```
+git clone https://github.com/samuel-constantino/task-manager-back-end.git
+```
+
+Entre na pasta do repositório:
 
 ```
-v16.14.0
+cd task-manager-back-end
 ```
 
-## Instalação
+Instale as dependências:
 
 ```
 npm install
 ```
 
-## Uso
+Rode a aplicação
 
 ```
 npm start
 ```
   
-
-## Testes
-
-  
-
-```sh
+Teste a aplicação
+ 
+```
 npm run test
 ```
 
 ## Documentação
 
-Esta API utiliza a documentação interativa do Swagger para testes manuais. Acesse a rota a seguir para interagir com a API:
+### Versão Node
 
 ```
-http://localhost:4000/docs/
+v16.14.0
+```
+
+### Banco de Dados
+
+O BD utilizado nessa aplicação é o MongoDB. Há duas coleções no banco:
+  - Users: 
+```
+
 ```
 
 ## Autor
