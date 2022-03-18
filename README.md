@@ -26,13 +26,13 @@
 	- [Pontos de Acesso](#pontos-de-acesso)
 		- [Usuário](#usuário)
 			- [Login](#login)
-			- [Registro](registro)
+			- [Registro](#registro)
 		- [Tarefa](#tarefa)
-			- [Tarefas por Usuário](tarefas-por-usuario)
-			- [Tarefas por ID](tarefas-por-id)
-			- [Criar Tarefas](criar-tarefas)
-			- [Editar Tarefas](editar-tarefas)
-			- [Remvoer Tarefas](remover-tarefas)
+			- [Tarefas por Usuário](#tarefas-por-usuario)
+			- [Tarefas por ID](#tarefas-por-id)
+			- [Criar Tarefas](#criar-tarefas)
+			- [Editar Tarefas](#editar-tarefas)
+			- [Remvoer Tarefas](#remover-tarefas)
 
 ## Instruções
 
