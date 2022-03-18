@@ -3,7 +3,17 @@ module.exports = {
     tags: ['Tasks'],
     description: 'Get Tasks for User',
     operationId: 'findByUser',
-    parameters: [],
+    parameters: [
+      {
+        in: 'header',
+        name: 'authorization',
+        schema: {
+          type: 'string',
+          format: 'token',
+        },
+        required: true,
+      },
+    ],
     responses: {
       200: {
         description: 'Success',
