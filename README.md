@@ -23,7 +23,6 @@
 ## Sumário
 
 - [Instruções](#instruções)
-
 - [Documentação](#documentação)
 	- [Versão Node](#versão-node)
 	- [Bando de Dados](#banco-de-dados)
@@ -102,6 +101,14 @@ v16.14.0
 http://localhost:4000/login
 ```
 
+![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/login/params.png)
+
+![Corpo](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/login/body.png)
+
+![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/login/responses/ok.png)
+
+![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/login/responses/bad-request.png)
+
 - Registro
 
 ```
@@ -116,11 +123,15 @@ http://localhost:4000/register
 http://localhost:4000/tasks
 ```
 
+![]()
+
 - Tarefa por ID
 
 ```
 http://localhost:4000/tasks/:id
 ```
+
+![]()
 
 
 
