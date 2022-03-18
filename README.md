@@ -94,7 +94,7 @@ v16.14.0
 - Login
 
 ```
-http://localhost:4000/login
+POST /login
 ```
 
 ![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-login/params.png)
@@ -108,7 +108,7 @@ http://localhost:4000/login
 - Registro
 
 ```
-http://localhost:4000/register
+POST register
 ```
 
 ![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-register/params.png)
@@ -124,7 +124,7 @@ http://localhost:4000/register
 - Tarefas por Usuário
 
 ```
-http://localhost:4000/tasks
+GET /tasks
 ```
 
 ![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/get-tasks/params.png)
@@ -134,11 +134,56 @@ http://localhost:4000/tasks
 - Tarefa por ID
 
 ```
-http://localhost:4000/tasks/:id
+GET /tasks/:id
 ```
 
-![]()
+![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/get-tasks-id/params.png)
 
+![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/get-tasks-id/responses/ok.png)
+
+![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/get-tasks-id/responses/bad-request.png)
+
+- Criar Tarefa
+
+```
+POST /tasks
+```
+
+![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-create-task/params.png)
+
+![Corpo](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-create-task/body.png)
+
+![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-create-task/responses/ok.png)
+
+![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-create-task/responses/bad-request.png)
+
+- Editar Tarefa
+
+```
+POST /tasks
+```
+
+![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/update-task/params.png)
+
+![Corpo](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/update-task/body.png)
+
+![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/update-task/responses/ok.png)
+
+![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/update-task/responses/bad-request.png)
+
+- Remover Tarefa
+
+```
+DELETE /task/:id
+```
+
+![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/delete-task/params.png)
+
+![Corpo](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/delete-task/body.png)
+
+![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/delete-task/responses/ok.png)
+
+![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/delete-task/responses/bad-request.png)
 
 
 ### Autor
