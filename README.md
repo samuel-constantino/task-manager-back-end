@@ -2,30 +2,21 @@
 <h1  align="center">Bem-vinda ao Gerenciador de Tarefas [Back-End] 👋</h1>
 
 <p>
-
-<img  alt="Version"  src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000"  />
-
-<a  href="https://github.com/samuel-constantino/task-manager-back-end#readme"  target="_blank">
-
-<img  alt="Documentation"  src="https://img.shields.io/badge/documentation-yes-brightgreen.svg"  />
-
-</a>
-
-<a  href="https://github.com/samuel-constantino/task-manager-back-end/graphs/commit-activity"  target="_blank">
-
-<img  alt="Maintenance"  src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"  />
-
-</a>
-
-<a  href="https://github.com/samuel-constantino/task-manager-back-end/blob/master/LICENSE"  target="_blank">
-
-<img  alt="License: ISC"  src="https://img.shields.io/github/license/samuel-constantino/task-manager-back-end"  />
-
-</a>
-
+  <img  alt="Version"  src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000"  />
+	
+  <a  href="https://github.com/samuel-constantino/task-manager-back-end#readme"  target="_blank">
+    <img  alt="Documentation"  src="https://img.shields.io/badge/documentation-yes-brightgreen.svg"  />
+  </a>
+	
+  <a  href="https://github.com/samuel-constantino/task-manager-back-end/graphs/commit-activity"  target="_blank">
+    <img  alt="Maintenance"  src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"  />
+  </a>
+	
+  <a  href="https://github.com/samuel-constantino/task-manager-back-end/blob/master/LICENSE"  target="_blank">
+    <img  alt="License: ISC"  src="https://img.shields.io/github/license/samuel-constantino/task-manager-back-end"  />
+  </a>
 </p>
 
-  
 
 > API REST para gerenciamento e otimização de tarefas desenvolvida com NodeJS, Express e MongoDB.
   
@@ -34,13 +25,12 @@
 - [Instruções](#instruções)
 
 - [Documentação](#documentação)
-	- [Métodos](#métodos) 
-	- [respostas](#respostas)
-	- [EndPoints](#usuários)
-		- [Usuários](#usuários)
-		- [Login](#login)
-		- [Parceiros](#parceiros)
-		- [Posts](#posts)
+	- [Versão Node](#versão-node)
+	- [Bando de Dados](#banco-de-dados)
+	- [Respostas](#respostas)
+	- [Pontos de Acesso](#pontos-de-acesso)
+		- [Usuário](#usuário)
+		- [Tarefa](#tarefa)
 
 ## Instruções
 
@@ -85,17 +75,56 @@ v16.14.0
 ```
 
 ### Banco de Dados
+#### MongoDB:
 
-O BD utilizado nessa aplicação é o MongoDB. Há duas coleções no banco:
-  - Users: 
+![User Schema](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/user-schema.png)
 
-![User Schema]()
+![Task Schema](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/task-schema.png)
 
-  - Tasks
+### Respostas
 
-![Task Schema]()
 
-## Autor
+| Código | Descrição |
+|---|---|
+| `200` | Requisição executada com sucesso (Success).|
+| `201` | Registro criado com sucesso (Created).|
+| `400` | Dados da requisição mal formados (Bad request).|
+| `401` | Usuário não autorizado (Unauthorized).|
+| `404` | Registro pesquisado não encontrado (Not found).|
+
+### Pontos de Acesso
+
+#### Usuário
+
+- Login
+
+```
+http://localhost:4000/login
+```
+
+- Registro
+
+```
+http://localhost:4000/register
+```
+
+#### Tarefa
+
+- Tarefas por Usuário
+
+```
+http://localhost:4000/tasks
+```
+
+- Tarefa por ID
+
+```
+http://localhost:4000/tasks/:id
+```
+
+
+
+### Autor
 
   
 
