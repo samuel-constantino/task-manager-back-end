@@ -101,7 +101,8 @@ v16.14.0
 
 #### Usuário
 
-##### Login
+<details>
+<summary>Login</summary>
 
 ```
 POST /login
@@ -114,6 +115,8 @@ POST /login
 ![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-login/responses/ok.png)
 
 ![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-login/responses/bad-request.png)
+	
+</details>
 
 ##### Registro
 
