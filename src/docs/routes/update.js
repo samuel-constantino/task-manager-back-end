@@ -1,5 +1,5 @@
 module.exports = {
-    post: {
+    put: {
       tags: ['Tasks'],
       description: 'Update a new Task',
       operationId: 'update',
