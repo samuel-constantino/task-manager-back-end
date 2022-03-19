@@ -25,14 +25,7 @@
 	- [Respostas](#respostas)
 	- [Pontos de Acesso](#pontos-de-acesso)
 		- [Usuário](#usuário)
-			- [Login](#login)
-			- [Registro](#registro)
 		- [Tarefa](#tarefa)
-			- [Tarefas por Usuário](#tarefas-por-usuário)
-			- [Tarefas por ID](#tarefa-por-id)
-			- [Criar Tarefas](#criar-tarefa)
-			- [Editar Tarefas](#editar-tarefa)
-			- [Remover Tarefas](#remover-tarefa)
 - [Autor](#autor)
 - [Suporte](#suporte)
 - [Licença](#-licença)
@@ -118,10 +111,11 @@ POST /login
 	
 </details>
 
-##### Registro
+<details>
+<summary>Registro</summary>
 
 ```
-POST register
+POST /register
 ```
 
 ![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-register/params.png)
@@ -131,23 +125,29 @@ POST register
 ![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-register/responses/ok.png)
 
 ![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-register/responses/bad-request.png)
+	
+</details>
 
 #### Tarefa
 
-##### Tarefas por Usuário
+<details>
+<summary>Tarefa por Usuário</summary>
 
 ```
-GET /tasks
+POST /tasks
 ```
 
 ![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/get-tasks/params.png)
 
 ![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/get-tasks/responses/ok.png)
+	
+</details>
 
-##### Tarefa por ID
+<details>
+<summary>Tarefa por ID</summary>
 
 ```
-GET /tasks/:id
+POST /tasks/:id
 ```
 
 ![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/get-tasks-id/params.png)
@@ -155,8 +155,13 @@ GET /tasks/:id
 ![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/get-tasks-id/responses/ok.png)
 
 ![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/get-tasks-id/responses/bad-request.png)
+	
+</details>
 
-##### Criar Tarefa
+</details>
+
+<details>
+<summary>Criar Tarefa</summary>
 
 ```
 POST /tasks
@@ -170,24 +175,30 @@ POST /tasks
 
 ![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-create-task/responses/bad-request.png)
 
-##### Editar Tarefa
+</details>
+
+<details>
+<summary>Editar Tarefa</summary>
 
 ```
-POST /tasks
+PUT /tasks/:id
 ```
 
-![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/update-task/params.png)
+![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/put-task/params.png)
 
-![Corpo](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/update-task/body.png)
+![Corpo](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/put-task/body.png)
 
-![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/update-task/responses/ok.png)
+![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/put-task/responses/ok.png)
 
-![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/update-task/responses/bad-request.png)
+![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/put-task/responses/bad-request.png)
 
-##### Remover Tarefa
+</details>
+
+<details>
+<summary>Remover Tarefa</summary>
 
 ```
-DELETE /task/:id
+DELETE /tasks/:id
 ```
 
 ![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/delete-task/params.png)
@@ -197,6 +208,8 @@ DELETE /task/:id
 ![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/delete-task/responses/ok.png)
 
 ![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/delete-task/responses/bad-request.png)
+
+</details>
 
 
 ### Autor
