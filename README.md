@@ -14,7 +14,8 @@
 </p>
 
 
-> API REST para gerenciamento e otimização de tarefas desenvolvida com NodeJS, Express e MongoDB.
+> Esta API REST é parte do sistema Full Stack [Gerenciador de Tarefas](https://github.com/samuel-constantino/task-manager) desenvolvido em Node.js idealizado para otimização e monitoramento de tarefas.
+> A motivação para o desenvolvimento dessa aplicação partiu da ideia de criar um sistema Full Stack capaz de testar meus conhecimentos atuais e minha capacidade de adaptação a novas tecnologias.
   
 ## Sumário
 
@@ -26,6 +27,8 @@
 	- [Pontos de Acesso](#pontos-de-acesso)
 		- [Usuário](#usuário)
 		- [Tarefa](#tarefa)
+- [Tecnologias](#tecnologias)
+- [Próximos Passos](#próximos-passos)
 - [Autor](#autor)
 - [Suporte](#suporte)
 - [Licença](#-licença)
@@ -73,11 +76,15 @@ v16.14.0
 ```
 
 ### Banco de Dados
-#### MongoDB:
+
+<details>
+<summary>MongoDB</summary>
 
 ![User Schema](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/user-schema.png)
 
 ![Task Schema](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/task-schema.png)
+	
+</details>
 
 ### Respostas
 
@@ -112,6 +119,7 @@ POST /login
 </details>
 
 <details>
+	
 <summary>Registro</summary>
 
 ```
@@ -211,14 +219,30 @@ DELETE /tasks/:id
 
 </details>
 
+### Tecnologias
+
+- ESLint
+- Express
+- Swagger UI Express
+- Json Web Token
+- Md5
+- Joi
+- MongoDB
+- MongoDB Memory Server
+- Mocha
+- Chai
+- Sinon
+- NYC
+
+### Próximos Passos
+
+- Disponibilizar aplicação em núvem
+- Disponibilizar acesso a documentação interativa do Swagger
+- Implementar rota para relatório histórico
 
 ### Autor
 
-  
-
 👤 **Samuel Constantino <samuelicapuidados@gmail.com>**
-
-  
 
 * Website: https://www.linkedin.com/in/samuel-constantino/
 
@@ -227,21 +251,13 @@ DELETE /tasks/:id
 
 ## Suporte
 
-  
-
 Deixe uma ⭐️ se este projeto te ajudou!
 
-  
-
 ## 📝 Licença
-
-  
 
 Copyright © 2022 [Samuel Constantino <samuelicapuidados@gmail.com>](https://github.com/samuel-constantino).<br  />
 
 Este projeto é licenciado pela [ISC](https://github.com/samuel-constantino/task-manager-back-end/blob/master/LICENSE) .
-
-  
 
 ***
 
