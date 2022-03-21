@@ -55,6 +55,16 @@ Instale as dependências:
 npm install
 ```
 
+Renomeie arquivo de configurações de ambiente
+```
+mv .env.example .env
+```
+
+Ative servidor do MongoDB
+```
+sudo service mongod start
+```
+
 Rode a aplicação
 
 ```
