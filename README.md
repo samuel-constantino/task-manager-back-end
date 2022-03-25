@@ -79,6 +79,8 @@ npm run test
 
 ## Documentação
 
+Esta API está disponível também na núvem por meio desse [link](https://task-manager-bk-0209.herokuapp.com/docs/)
+
 ### Versão Node
 
 ```
