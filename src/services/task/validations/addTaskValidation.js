@@ -6,7 +6,7 @@ const taskSchema = Joi.object({
   name: Joi.string().min(6).empty(false).required(),
   description: Joi.string().min(5).empty(false).required(),
   status: Joi.string()
-    .valid('In progress', 'Completed')
+    .valid('In progress', 'Done')
     .empty(false)
     .required(),
   priority: Joi.object({
