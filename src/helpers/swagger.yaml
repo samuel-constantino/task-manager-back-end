@@ -1,0 +1,340 @@
+openapi: 3.0.0
+
+info:
+  title: Gerenciador de Tarefas
+  description: |
+    API Restful para sistema [Gerenciador de Tarefas](https://task-manager-ft-0209.herokuapp.com/swagger) desenvolvido em Node.js com Express.
+    
+    Idealizado para otimização e monitoramento de tarefas.
+    
+    Motivação: Criar um sistema Full Stack capaz de testar meus conhecimentos atuais e minha capacidade de adaptação a novas tecnologias.
+
+    **LinkedIn:** [Samuel Constantino](https://www.linkedin.com/in/samuel-constantino/) </br>
+    **Email**: samuelicapuidados@gmail.com </br>
+    **GitHub**: [samuel-constantino](https://github.com/samuel-constantino/) </br>
+    **Data:** 26/03/2022 </br>
+  version: 1.0.0
+
+servers:
+  - url: https://task-manager-bk-0209.herokuapp.com/
+    description: Servidor para ambiente de produção.
+  - url: http://localhost:4000/
+    description: Servidor para ambiente de desenvolvimento.
+
+paths:
+  /login:
+    post:
+      tags:
+        - Users
+      summary: Entra no sistema.
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#components/requestBodies/Login'
+      responses: 
+        '200':
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Login'
+
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /register:
+    post:
+      tags:
+        - Users
+      summary: Regista no sistema.
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#components/requestBodies/Register'
+      responses: 
+        '201':
+          description: Criado com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Register'
+
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /tasks:
+    get:
+      tags:
+        - Tasks
+      summary: Retorna lista de tarefas
+      responses:
+        '200':
+          description: Sucesso
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  $ref: '#components/schemas/Task'
+        '401':
+          $ref: '#components/responses/Unauthorized'
+    
+    post:
+      tags:
+        - Tasks
+      summary: Cria uma tarefa.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#components/requestBodies/Task'
+      responses: 
+        '201':
+          description: Criado com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+    put:
+      tags:
+        - Tasks
+      summary: Atualiza uma tarefa.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#components/requestBodies/Task'
+      responses: 
+        '200':
+          description: Atualizado com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+    delete:
+      tags:
+        - Tasks
+      summary: Remove tarefa pelo ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID da Tarefa
+          schema:
+            type : string
+            format: uuid
+      responses:
+        '200':
+          description: Sucesso
+          content:
+            application/json:
+              schema: 
+                type: object
+                example:
+                  message: Tarefa removida com sucesso
+        '401':
+          $ref: '#components/responses/Unauthorized'
+
+        '404':
+          $ref: '#components/responses/NotFound'
+    
+  /tasks/{id}:
+    get:
+      tags:
+        - Tasks
+      summary: Retorna tarefa pelo ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID da Tarefa
+          schema:
+            type : string
+      responses:
+        '200':
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schemas/Task'
+        '401':
+          $ref: '#components/responses/Unauthorized'
+        '404':
+          $ref: '#components/responses/NotFound'
+
+components:
+  schemas:
+    Login:
+      type: object
+      properties:
+        _id:
+          type: string
+          format: uuid
+          example: "6226111317c0d522ca2af129"
+        name:
+          type: string
+          format: uuid
+          example: "User name"
+        email:
+          type: string
+          example: usuario@email.com
+        token:
+          type: string
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjYyMjYxMTEzMTdjMGQ1MjJjYTJhZjEyOSIsIm5hbWUiOiJVc3XDoXJpbyA0IiwiZW1haWwiOiJ1c3VhcmlvNEBlbWFpbC5jb20ifSwiaWF0IjoxNjQ4MzE5NTA2LCJleHAiOjE2NDg5MjQzMDZ9.DRuqEapRsePRWgHYI130-nnZQ7Ofqiwcpxl5Vk6P6KE
+
+    Register:
+      type: object
+      properties:
+        _id:
+          type: string
+          format: uuid
+          example: "6235c27abf26562dd6bd01fa"
+        name:
+          type: string
+          format: uuid
+          example: "User name"
+        email:
+          type: string
+          example: usuario@email.com
+    
+    Task:
+      type: object
+      properties:
+        _id:
+          type: string
+          format: uuid
+          example: "620e45f0b404aad8c73f2412"
+        userId:
+          type: string
+          format: uuid
+          example: "6226111317c0d522ca2af129"
+        name:
+          type: string
+          example: Estudar
+        description:
+          type: string
+          example: Node.js, Express e Swagger
+        status:
+          type: string
+          example: In progress
+        priority:
+          type: object
+          example:
+            important: true
+            urgent: true
+      required:  
+        - _id
+        - userName
+        - name
+        - description
+        - status
+        - priority
+    
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+      required:
+        - message
+  
+  requestBodies:
+    Task:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Lavar louça.
+        description:
+          type: string
+          example: Lavar a louça amtes do almoço.
+        status:
+          type: string
+          example: Done
+        priority:
+          type: object
+          example:
+            important: true
+            urgent: false
+
+    Login:
+      type: object
+      properties:
+        email:
+          type: string
+          example: usuario@email.com
+        password:
+          type: string
+          example: 123456789.
+
+    Register:
+      type: object
+      properties:
+        name:
+          type: string
+          example: User name
+        email:
+          type: string
+          example: usuario@email.com
+        password:
+          type: string
+          example: 123456789.
+  
+  responses:
+    NotFound:
+      description: Recurso não encontrado
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+
+    BadRequest:
+      description: Requisição mal formada
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    
+    Unauthorized:
+      description: Token de autorização está faltando, expirado ou é inválido.
+      content:
+        application/json:
+          schema: 
+            $ref: '#components/schemas/Error'
+
+  securitySchemes:
+    bearerAuth:
+      type: 'http'
+      scheme: 'bearer'
+      bearerFormat: JWT
+
+security:
+  - bearerAuth: []

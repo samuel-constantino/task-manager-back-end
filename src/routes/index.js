@@ -1,14 +1,12 @@
 const express = require('express');
-const swaggerUI = require('swagger-ui-express');
-const docs = require('../docs');
 const { taskRouter } = require('./taskRouter');
 const { loginRouter } = require('./loginRouter');
 const { registerRouter } = require('./registerRouter');
-const { error } = require('../middlewares');
+const { error, swagger } = require('../middlewares');
 
 const router = express.Router({ mergeParams: true });
 
-router.use('/docs', swaggerUI.serve, swaggerUI.setup(docs));
+router.use('/swagger', swagger.serve, swagger.setup);
 
 router.use('/tasks', taskRouter);
 router.use('/login', loginRouter);

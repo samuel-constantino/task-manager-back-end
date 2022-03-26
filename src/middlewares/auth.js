@@ -2,9 +2,10 @@ const { StatusCodes } = require('http-status-codes');
 const { decodeToken } = require('../global/utils/token');
 
 const auth = async (req, res, next) => {
-    const token = req.headers.authorization;
-
     try {
+        const { authorization } = req.headers;
+        const token = authorization.split(' ')[1];
+
         if (!token) throw new Error('Token not found');
         const decoded = decodeToken(token);
         req.loggedUser = decoded.data;

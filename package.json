@@ -31,7 +31,8 @@
     "mocha": "^9.2.1",
     "mongodb-memory-server": "^6.9.6",
     "nyc": "^15.1.0",
-    "sinon": "^13.0.1"
+    "sinon": "^13.0.1",
+    "yamljs": "^0.3.0"
   },
   "dependencies": {
     "cors": "^2.8.5",
