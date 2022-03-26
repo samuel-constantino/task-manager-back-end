@@ -9,7 +9,6 @@ taskRouter.get('/', auth, rescue(taskController.findByUser));
 taskRouter.get('/:id', auth, rescue(taskController.findById));
 taskRouter.post('/', auth, rescue(taskController.create));
 taskRouter.put('/:id', auth, rescue(taskController.updateById));
-taskRouter.delete('/:name', auth, rescue(taskController.removeByName));
 taskRouter.delete('/:id', auth, rescue(taskController.removeById));
 
 module.exports = { taskRouter };
