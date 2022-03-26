@@ -31,8 +31,7 @@
     "mocha": "^9.2.1",
     "mongodb-memory-server": "^6.9.6",
     "nyc": "^15.1.0",
-    "sinon": "^13.0.1",
-    "yamljs": "^0.3.0"
+    "sinon": "^13.0.1"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -45,6 +44,7 @@
     "md5": "^2.3.0",
     "mongodb": "^4.4.0",
     "nodemon": "^2.0.15",
-    "swagger-ui-express": "^4.3.0"
+    "swagger-ui-express": "^4.3.0",
+    "yamljs": "^0.3.0"
   }
 }
