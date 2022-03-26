@@ -15,9 +15,9 @@ const taskSchema = Joi.object({
   }).required(),
 });
 
-const taskValidation = (task) => {
+const addTaskValidation = (task) => {
   const { error } = taskSchema.validate(task);
   if (error) badRequest(error.message);
 };
 
-module.exports = { taskValidation };
+module.exports = { addTaskValidation };
