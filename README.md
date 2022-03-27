@@ -14,13 +14,16 @@
 </p>
 
 
-> Esta API REST é parte do sistema Full Stack [Gerenciador de Tarefas](https://github.com/samuel-constantino/task-manager) desenvolvido em Node.js idealizado para otimização e monitoramento de tarefas.
+> Esta API REST é parte do sistema Full Stack [Gerenciador de Tarefas](https://github.com/samuel-constantino/task-manager) desenvolvido em Node.js com Express idealizado para otimização e monitoramento de tarefas. </br>
+> Os diferenciais dessa aplicação incluem: arquitetura MSC, operações CRUD, registro e login de usuários para acesso às rotas protegidas, documentação openAPI com swagger e testes unitários </br>
 > A motivação para o desenvolvimento dessa aplicação partiu da ideia de criar um sistema Full Stack capaz de testar meus conhecimentos atuais e minha capacidade de adaptação a novas tecnologias.
   
 ## Sumário
 
 - [Instruções](#instruções)
 - [Documentação](#documentação)
+	- [Uso Local](#uso-local)
+	- [Uso em Núvem](#uso-em-núvem)
 	- [Versão Node](#versão-node)
 	- [Bando de Dados](#banco-de-dados)
 	- [Respostas](#respostas)
@@ -35,7 +38,7 @@
 
 ## Instruções
 
-### Instalação
+### Instalação Local
 
 Clone o repositório
   
@@ -79,7 +82,19 @@ npm run test
 
 ## Documentação
 
-Esta API está disponível também na núvem por meio desse [link](https://task-manager-bk-0209.herokuapp.com/docs/)
+### Uso em Núvem
+
+Esta API está disponível na núvem por meio desse [link](https://task-manager-bk-0209.herokuapp.com/swagger/)
+
+### Uso local
+
+Com a aplicação rodando, acesse o seguinte URL
+
+```
+http://localhost:4000/swagger
+```
+
+![Swagger Routes](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/rotas-swagger.png)
 
 ### Versão Node
 
@@ -109,128 +124,6 @@ v16.14.0
 | `401` | Usuário não autorizado (Unauthorized).|
 | `404` | Registro pesquisado não encontrado (Not found).|
 
-### Pontos de Acesso
-
-#### Usuário
-
-<details>
-<summary>Login</summary>
-
-```
-POST /login
-```
-
-![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-login/params.png)
-
-![Corpo](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-login/body.png)
-
-![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-login/responses/ok.png)
-
-![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-login/responses/bad-request.png)
-	
-</details>
-
-<details>
-	
-<summary>Registro</summary>
-
-```
-POST /register
-```
-
-![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-register/params.png)
-
-![Corpo](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-register/body.png)
-
-![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-register/responses/ok.png)
-
-![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-register/responses/bad-request.png)
-	
-</details>
-
-#### Tarefa
-
-<details>
-<summary>Tarefa por Usuário</summary>
-
-```
-POST /tasks
-```
-
-![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/get-tasks/params.png)
-
-![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/get-tasks/responses/ok.png)
-	
-</details>
-
-<details>
-<summary>Tarefa por ID</summary>
-
-```
-POST /tasks/:id
-```
-
-![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/get-tasks-id/params.png)
-
-![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/get-tasks-id/responses/ok.png)
-
-![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/get-tasks-id/responses/bad-request.png)
-	
-</details>
-
-</details>
-
-<details>
-<summary>Criar Tarefa</summary>
-
-```
-POST /tasks
-```
-
-![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-create-task/params.png)
-
-![Corpo](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-create-task/body.png)
-
-![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-create-task/responses/ok.png)
-
-![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/post-create-task/responses/bad-request.png)
-
-</details>
-
-<details>
-<summary>Editar Tarefa</summary>
-
-```
-PUT /tasks/:id
-```
-
-![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/put-task/params.png)
-
-![Corpo](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/put-task/body.png)
-
-![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/put-task/responses/ok.png)
-
-![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/put-task/responses/bad-request.png)
-
-</details>
-
-<details>
-<summary>Remover Tarefa</summary>
-
-```
-DELETE /tasks/:id
-```
-
-![Parâmetros](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/delete-task/params.png)
-
-![Corpo](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/delete-task/body.png)
-
-![Resposta OK](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/delete-task/responses/ok.png)
-
-![Resposta Bad Request](https://github.com/samuel-constantino/task-manager-back-end/blob/main/src/images/routes/delete-task/responses/bad-request.png)
-
-</details>
-
 ### Tecnologias
 
 - ESLint
@@ -248,9 +141,7 @@ DELETE /tasks/:id
 
 ### Próximos Passos
 
-- Disponibilizar aplicação em núvem
-- Disponibilizar acesso a documentação interativa do Swagger
-- Implementar rota para relatório histórico
+- Implementar rota para relatórios e insigts
 
 ### Autor
 
