@@ -22,8 +22,8 @@
 
 - [Instruções](#instruções)
 - [Documentação](#documentação)
-	- [Uso Local](#uso-local)
 	- [Uso em Núvem](#uso-em-núvem)
+	- [Uso Local](#uso-local)
 	- [Versão Node](#versão-node)
 	- [Bando de Dados](#banco-de-dados)
 	- [Respostas](#respostas)
