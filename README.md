@@ -141,6 +141,7 @@ v16.14.0
 
 ### Próximos Passos
 
+- Aumentar a cobertura de testes
 - Implementar rota para relatórios e insigts
 
 ### Autor
